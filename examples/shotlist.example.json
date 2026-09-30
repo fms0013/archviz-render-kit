@@ -1,0 +1,219 @@
+{
+  "project": "Ornek Villa A",
+  "default_quality": "final",
+  "shot_count": 6,
+  "shots": [
+    {
+      "id": "salon-kd",
+      "title": "Salon — güneydoğu köşeden",
+      "kind": "interior",
+      "quality": "final",
+      "version": 1,
+      "room": null,
+      "note": "Kamera güneydoğu köşede; balkon kapısı kadrajın sağında kalmalı.",
+      "output": "ornek-villa-a_salon-kd_interior_final_v01.png",
+      "camera": {
+        "type": "PERSP",
+        "focal_length_mm": 24.0,
+        "sensor_width_mm": 36.0,
+        "sensor_fit": "HORIZONTAL",
+        "eye_height_m": 1.55,
+        "shift_y": 0.0788,
+        "level": true,
+        "clipping_start_m": 0.05,
+        "distance_m": 5.5
+      },
+      "lighting": {
+        "mode": "mixed",
+        "sun_energy": 3.0,
+        "sun_angle_deg": 2.0,
+        "world_strength": 0.4,
+        "area_light_count": 3,
+        "color_temperature_k": 4000
+      },
+      "resolution": {
+        "width": 1920,
+        "height": 1080
+      },
+      "samples": 512,
+      "warnings": []
+    },
+    {
+      "id": "mutfak-b",
+      "title": "Mutfak — batı duvarı",
+      "kind": "interior",
+      "quality": "final",
+      "version": 1,
+      "room": null,
+      "note": null,
+      "output": "ornek-villa-a_mutfak-b_interior_final_v01.png",
+      "camera": {
+        "type": "PERSP",
+        "focal_length_mm": 35.0,
+        "sensor_width_mm": 36.0,
+        "sensor_fit": "HORIZONTAL",
+        "eye_height_m": 1.5,
+        "shift_y": 0.0926,
+        "level": true,
+        "clipping_start_m": 0.05,
+        "distance_m": 4.2
+      },
+      "lighting": {
+        "mode": "mixed",
+        "sun_energy": 3.0,
+        "sun_angle_deg": 2.0,
+        "world_strength": 0.4,
+        "area_light_count": 3,
+        "color_temperature_k": 4000
+      },
+      "resolution": {
+        "width": 1920,
+        "height": 1080
+      },
+      "samples": 512,
+      "warnings": []
+    },
+    {
+      "id": "kuzey-cephe",
+      "title": "Kuzey cephesi",
+      "kind": "exterior",
+      "quality": "final",
+      "version": 1,
+      "room": null,
+      "note": null,
+      "output": "ornek-villa-a_kuzey-cephe_exterior_final_v01.png",
+      "camera": {
+        "type": "PERSP",
+        "focal_length_mm": 35.0,
+        "sensor_width_mm": 36.0,
+        "sensor_fit": "HORIZONTAL",
+        "eye_height_m": 1.65,
+        "shift_y": 0.0,
+        "level": true,
+        "clipping_start_m": 0.1,
+        "distance_m": 22.0
+      },
+      "lighting": {
+        "mode": "sun",
+        "sun_energy": 4.0,
+        "sun_angle_deg": 1.5,
+        "sun_elevation_deg": 38.0,
+        "sun_azimuth_deg": 150.0,
+        "world_strength": 0.8,
+        "color_temperature_k": 5600
+      },
+      "resolution": {
+        "width": 2560,
+        "height": 1440
+      },
+      "samples": 768,
+      "warnings": []
+    },
+    {
+      "id": "guney-cephe",
+      "title": "Güney cephesi — giriş aksı",
+      "kind": "exterior",
+      "quality": "final",
+      "version": 1,
+      "room": null,
+      "note": null,
+      "output": "ornek-villa-a_guney-cephe_exterior_final_v01.png",
+      "camera": {
+        "type": "PERSP",
+        "focal_length_mm": 35.0,
+        "sensor_width_mm": 36.0,
+        "sensor_fit": "HORIZONTAL",
+        "eye_height_m": 1.65,
+        "shift_y": 0.0,
+        "level": true,
+        "clipping_start_m": 0.1,
+        "distance_m": 17.5
+      },
+      "lighting": {
+        "mode": "sun",
+        "sun_energy": 4.0,
+        "sun_angle_deg": 1.5,
+        "sun_elevation_deg": 30.0,
+        "sun_azimuth_deg": 225.0,
+        "world_strength": 0.8,
+        "color_temperature_k": 5600
+      },
+      "resolution": {
+        "width": 2560,
+        "height": 1440
+      },
+      "samples": 768,
+      "warnings": []
+    },
+    {
+      "id": "vaziyet-kuzey",
+      "title": "Vaziyet planı — kuzey yukarı",
+      "kind": "site-plan",
+      "quality": "final",
+      "version": 1,
+      "room": null,
+      "note": "Gölge kuzeybatıya düşer; kuzey okuyla tutarlıdır.",
+      "output": "ornek-villa-a_vaziyet-kuzey_site-plan_final_v01.png",
+      "camera": {
+        "type": "ORTHO",
+        "ortho_scale_m": 71.3,
+        "pitch_deg": 90.0,
+        "eye_height_m": 120.0,
+        "level": false,
+        "clipping_start_m": 0.1,
+        "clipping_end_m": 5000.0
+      },
+      "lighting": {
+        "mode": "sun",
+        "sun_energy": 3.0,
+        "sun_angle_deg": 3.0,
+        "sun_elevation_deg": 65.0,
+        "sun_azimuth_deg": 135.0,
+        "world_strength": 1.2,
+        "color_temperature_k": 6000
+      },
+      "resolution": {
+        "width": 3200,
+        "height": 3200
+      },
+      "samples": 384,
+      "warnings": []
+    },
+    {
+      "id": "bahce-gunbatimi",
+      "title": "Arka bahçe — gün batımı",
+      "kind": "landscape",
+      "quality": "preview",
+      "version": 1,
+      "room": null,
+      "note": null,
+      "output": "ornek-villa-a_bahce-gunbatimi_landscape_preview_v01.png",
+      "camera": {
+        "type": "PERSP",
+        "focal_length_mm": 28.0,
+        "sensor_width_mm": 36.0,
+        "sensor_fit": "HORIZONTAL",
+        "eye_height_m": 1.7,
+        "shift_y": 0.0583,
+        "level": true,
+        "clipping_start_m": 0.05,
+        "distance_m": 12.0
+      },
+      "lighting": {
+        "mode": "sun",
+        "sun_energy": 3.2,
+        "sun_angle_deg": 1.0,
+        "sun_elevation_deg": 11.0,
+        "sun_azimuth_deg": 250.0,
+        "world_strength": 1.0,
+        "color_temperature_k": 3200
+      },
+      "resolution": {
+        "width": 2560,
+        "height": 1440
+      },
+      "samples": 160,
+      "warnings": []
+    }
+  ]
+}

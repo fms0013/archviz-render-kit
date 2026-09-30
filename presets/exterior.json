@@ -1,0 +1,44 @@
+{
+  "name": "exterior",
+  "label": "Dış cephe",
+  "description": "Tek nokta veya iki nokta perspektifle, gün ışığında cephe renderı.",
+  "engine": "CYCLES",
+  "resolution": { "width": 2560, "height": 1440 },
+  "samples": 768,
+  "denoise": true,
+  "denoiser": "OPENIMAGEDENOISE",
+  "color_management": {
+    "view_transform": "AgX",
+    "look": "AgX - Medium Contrast",
+    "exposure": 0.0,
+    "gamma": 1.0
+  },
+  "film": { "transparent": false, "filter_size": 1.5 },
+  "camera": {
+    "type": "PERSP",
+    "focal_length_mm": 35.0,
+    "sensor_width_mm": 36.0,
+    "sensor_fit": "HORIZONTAL",
+    "eye_height_m": 1.65,
+    "shift_y": 0.0,
+    "level": true,
+    "clipping_start_m": 0.1
+  },
+  "lighting": {
+    "mode": "sun",
+    "sun_energy": 4.0,
+    "sun_angle_deg": 1.5,
+    "sun_elevation_deg": 35.0,
+    "sun_azimuth_deg": 120.0,
+    "world_strength": 0.8,
+    "color_temperature_k": 5600
+  },
+  "render": {
+    "use_persistent_data": true,
+    "max_bounces": 12,
+    "transparent_max_bounces": 8,
+    "caustics_reflective": false,
+    "caustics_refractive": false
+  },
+  "notes": "Cepheyi gölgede bırakmamak için güneş azimutu, cephe normali ile 30-60 derece arasında kalacak şekilde seçilir. Silüet kontrolü için kamera mesafesi, yapı yüksekliğinin en az 2 katı olmalıdır."
+}

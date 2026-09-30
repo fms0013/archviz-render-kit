@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "archviz-render-kit"
+version = "0.1.0"
+description = "Mimari görselleştirme için render ön ayarları, kamera matematiği ve çekim listesi üreticisi (iç mekan, dış cephe, vaziyet, peyzaj)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "fms0013" }]
+keywords = [
+  "archviz", "architecture", "rendering", "blender", "cycles",
+  "interior", "exterior", "site-plan", "landscape", "mimari", "gorselleştirme"
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Architects",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Graphics :: 3D Rendering",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+
+[tool.setuptools.packages.find]
+include = ["archviz_kit*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E9", "F63", "F7", "F82"]

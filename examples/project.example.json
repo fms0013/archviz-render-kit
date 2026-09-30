@@ -1,0 +1,86 @@
+{
+  "project": "Ornek Villa A",
+  "default_quality": "final",
+  "notes": "Kamera mesafeleri metre, açılar derece. Azimut kuzeyden saat yönünde ölçülür; kuzey = 0, doğu = 90, güney = 180, batı = 270.",
+  "views": [
+    {
+      "id": "salon-kd",
+      "title": "Salon — güneydoğu köşeden",
+      "kind": "interior",
+      "camera": {
+        "eye_height_m": 1.55,
+        "distance_m": 5.5,
+        "target_center_height_m": 2.2
+      },
+      "note": "Kamera güneydoğu köşede; balkon kapısı kadrajın sağında kalmalı."
+    },
+    {
+      "id": "mutfak-b",
+      "title": "Mutfak — batı duvarı",
+      "kind": "interior",
+      "camera": {
+        "focal_mm": 35,
+        "eye_height_m": 1.5,
+        "distance_m": 4.2,
+        "target_center_height_m": 1.9
+      }
+    },
+    {
+      "id": "kuzey-cephe",
+      "title": "Kuzey cephesi",
+      "kind": "exterior",
+      "camera": {
+        "distance_m": 22.0,
+        "subject_width_m": 16.0,
+        "subject_height_m": 9.5
+      },
+      "lighting": {
+        "sun_azimuth_deg": 150.0,
+        "sun_elevation_deg": 38.0
+      }
+    },
+    {
+      "id": "guney-cephe",
+      "title": "Güney cephesi — giriş aksı",
+      "kind": "exterior",
+      "camera": {
+        "subject_width_m": 18.0,
+        "subject_height_m": 10.0
+      },
+      "lighting": {
+        "sun_azimuth_deg": 225.0,
+        "sun_elevation_deg": 30.0
+      }
+    },
+    {
+      "id": "vaziyet-kuzey",
+      "title": "Vaziyet planı — kuzey yukarı",
+      "kind": "site-plan",
+      "camera": {
+        "area_width_m": 62.0,
+        "area_height_m": 45.0,
+        "margin": 1.15
+      },
+      "lighting": {
+        "sun_azimuth_deg": 135.0,
+        "sun_elevation_deg": 65.0
+      },
+      "note": "Gölge kuzeybatıya düşer; kuzey okuyla tutarlıdır."
+    },
+    {
+      "id": "bahce-gunbatimi",
+      "title": "Arka bahçe — gün batımı",
+      "kind": "landscape",
+      "quality": "preview",
+      "camera": {
+        "eye_height_m": 1.7,
+        "distance_m": 12.0,
+        "target_center_height_m": 2.6
+      },
+      "lighting": {
+        "sun_azimuth_deg": 250.0,
+        "sun_elevation_deg": 11.0
+      }
+    }
+  ]
+}

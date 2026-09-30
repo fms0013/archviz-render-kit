@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Render çıktıları repoya girmez; yalnızca örnek/şablon dosyalar tutulur.
+renders/
+output/
+*.blend1
+*.blend2

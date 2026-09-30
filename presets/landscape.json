@@ -1,0 +1,44 @@
+{
+  "name": "landscape",
+  "label": "Peyzaj",
+  "description": "Bahçe, sert zemin ve bitkilendirmeyi öne çıkaran düşük güneş açılı render.",
+  "engine": "CYCLES",
+  "resolution": { "width": 2560, "height": 1440 },
+  "samples": 640,
+  "denoise": true,
+  "denoiser": "OPENIMAGEDENOISE",
+  "color_management": {
+    "view_transform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": 0.0,
+    "gamma": 1.0
+  },
+  "film": { "transparent": false, "filter_size": 1.5 },
+  "camera": {
+    "type": "PERSP",
+    "focal_length_mm": 28.0,
+    "sensor_width_mm": 36.0,
+    "sensor_fit": "HORIZONTAL",
+    "eye_height_m": 1.7,
+    "shift_y": 0.0,
+    "level": true,
+    "clipping_start_m": 0.05
+  },
+  "lighting": {
+    "mode": "sun",
+    "sun_energy": 3.2,
+    "sun_angle_deg": 1.0,
+    "sun_elevation_deg": 12.0,
+    "sun_azimuth_deg": 250.0,
+    "world_strength": 1.0,
+    "color_temperature_k": 3200
+  },
+  "render": {
+    "use_persistent_data": true,
+    "max_bounces": 16,
+    "transparent_max_bounces": 12,
+    "caustics_reflective": false,
+    "caustics_refractive": false
+  },
+  "notes": "Peyzajda gölge uzunluğu dokuyu gösterir; 8-20 derece arası güneş yüksekliği tercih edilir. Yaprak/çim malzemelerinde alt yüzey ışığı için max_bounces yükseltilmiştir."
+}

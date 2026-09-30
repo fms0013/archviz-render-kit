@@ -1,0 +1,43 @@
+{
+  "name": "interior",
+  "label": "İç mekan",
+  "description": "Göz hizasında, dikey çizgileri düzgün, doğal ışıklı iç mekan renderı.",
+  "engine": "CYCLES",
+  "resolution": { "width": 1920, "height": 1080 },
+  "samples": 512,
+  "denoise": true,
+  "denoiser": "OPENIMAGEDENOISE",
+  "color_management": {
+    "view_transform": "AgX",
+    "look": "AgX - Medium High Contrast",
+    "exposure": 0.0,
+    "gamma": 1.0
+  },
+  "film": { "transparent": false, "filter_size": 1.5 },
+  "camera": {
+    "type": "PERSP",
+    "focal_length_mm": 24.0,
+    "sensor_width_mm": 36.0,
+    "sensor_fit": "HORIZONTAL",
+    "eye_height_m": 1.55,
+    "shift_y": 0.0,
+    "level": true,
+    "clipping_start_m": 0.05
+  },
+  "lighting": {
+    "mode": "mixed",
+    "sun_energy": 3.0,
+    "sun_angle_deg": 2.0,
+    "world_strength": 0.4,
+    "area_light_count": 3,
+    "color_temperature_k": 4000
+  },
+  "render": {
+    "use_persistent_data": true,
+    "max_bounces": 12,
+    "transparent_max_bounces": 8,
+    "caustics_reflective": false,
+    "caustics_refractive": false
+  },
+  "notes": "Kamera tek nokta perspektifte tutulur (level=true); yükseltmek için kamera açısı değil shift_y kullanılır. Bu, dikey duvar/kapı kenarlarının eğilmesini engeller."
+}

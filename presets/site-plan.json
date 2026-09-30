@@ -1,0 +1,43 @@
+{
+  "name": "site-plan",
+  "label": "Vaziyet planı",
+  "description": "Tepeden dik (ortografik) bakış; vaziyet planı üzerine yerleşim okumak için.",
+  "engine": "CYCLES",
+  "resolution": { "width": 3200, "height": 3200 },
+  "samples": 384,
+  "denoise": true,
+  "denoiser": "OPENIMAGEDENOISE",
+  "color_management": {
+    "view_transform": "AgX",
+    "look": "AgX - Medium Contrast",
+    "exposure": 0.0,
+    "gamma": 1.0
+  },
+  "film": { "transparent": false, "filter_size": 1.5 },
+  "camera": {
+    "type": "ORTHO",
+    "ortho_scale_m": 60.0,
+    "pitch_deg": 90.0,
+    "eye_height_m": 120.0,
+    "level": false,
+    "clipping_start_m": 0.1,
+    "clipping_end_m": 5000.0
+  },
+  "lighting": {
+    "mode": "sun",
+    "sun_energy": 3.0,
+    "sun_angle_deg": 3.0,
+    "sun_elevation_deg": 65.0,
+    "sun_azimuth_deg": 135.0,
+    "world_strength": 1.2,
+    "color_temperature_k": 6000
+  },
+  "render": {
+    "use_persistent_data": true,
+    "max_bounces": 8,
+    "transparent_max_bounces": 4,
+    "caustics_reflective": false,
+    "caustics_refractive": false
+  },
+  "notes": "ortho_scale_m, kadraja girecek kare alanın kenar uzunluğudur (metre). Vaziyet planında yapı yükseklikleri baskılanır; gölge yönü kuzey okuyla tutarlı olmalıdır (kuzey yukarı kabul edilirken güneş güneydoğudan = azimut ~135°)."
+}
