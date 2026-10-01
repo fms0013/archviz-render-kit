@@ -46,6 +46,20 @@ def test_shift_y_sonlu_ve_makul():
     assert abs(shift) < 0.5  # Aşırı kaydırma lens bozulması gibi görünür
 
 
+def test_shift_y_odak_uzakligindan_bagimsiz():
+    """Mesafe de odakla ölçeklendiğinde shift_y sadeleşir: shift_y = Δh / kadraj genişliği.
+
+    Bu yüzden aynı odayı 24 mm veya 35 mm ile çekmek, tavanı kadraja almak için
+    gereken lens kaydırmasını değiştirmez.
+    """
+    width = 6.0
+    delta_height = 2.10 - 1.55
+    for focal in (20.0, 24.0, 28.0, 35.0, 50.0):
+        distance = framing.fit_distance_m(focal, 36.0, width)
+        shift = framing.shift_y_for_target(1.55, 2.10, distance, focal, 36.0)
+        assert shift == pytest.approx(delta_height / width, abs=1e-9)
+
+
 def test_ortografik_olcek_kare_cozunurluk():
     scale = framing.ortho_scale_for_area(55.0, 40.0, {"width": 3200, "height": 3200}, margin=1.1)
     assert scale == pytest.approx(60.5)
