@@ -1,11 +1,12 @@
 """archviz-render-kit — mimari görselleştirme için render ön ayarları ve yardımcıları.
 
-Bu paket Blender'a bağımlı değildir; kamera matematiği, ön ayar çözümleme ve
-çekim listesi üretimi saf Python olarak çalışır ve test edilebilir.
+Bu paket Blender'a bağımlı değildir; kamera matematiği, kadraj analizi, ön ayar
+çözümleme ve çekim listesi üretimi saf Python olarak çalışır ve test edilebilir.
 Blender'a bağlanan kısımlar `blender/` klasöründedir ve `archviz_kit.bridge`
 üzerinden aynı mantığı kullanır.
 """
 
+from archviz_kit.diagram import kadraj_analizi, plan_view_svg
 from archviz_kit.framing import (
     fit_distance_m,
     horizontal_fov_deg,
@@ -24,7 +25,7 @@ from archviz_kit.presets import (
 )
 from archviz_kit.shotlist import build_shotlist
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 __all__ = [
     "QUALITY_TIERS",
@@ -32,9 +33,11 @@ __all__ = [
     "build_shotlist",
     "fit_distance_m",
     "horizontal_fov_deg",
+    "kadraj_analizi",
     "load_preset",
     "ortho_scale_for_area",
     "output_name",
+    "plan_view_svg",
     "resolve",
     "sensor_height_mm",
     "shift_y_for_target",

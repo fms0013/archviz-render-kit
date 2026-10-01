@@ -128,7 +128,8 @@ archviz-render-kit/
 ├── skills/                  # ajan becerileri (SKILL.md)
 ├── docs/                    # iş akışı, kamera rehberi, kalite profilleri
 ├── examples/                # örnek proje tanımı + üretilmiş çekim listesi
-└── tests/                   # 68 birim testi
+├── tools/                   # referans kartı + kadraj diyagramı üreticileri
+└── tests/                   # 81 birim testi
 ```
 
 ---
@@ -177,6 +178,36 @@ framing.ortho_scale_for_area(62, 45, {"width": 3200, "height": 3200}, margin=1.1
 
 ---
 
+## Kadraj doğrulama (render almadan)
+
+En pahalı hata, kadrajın yanlış olduğunu **final render'da** fark etmektir. Bu araç,
+render almadan önce kameranın odaya sığıp sığmadığını plan görünüşlü bir
+diyagramla gösterir:
+
+```bash
+python tools/kadraj_diagram.py --genislik 6.0 --derinlik 3.0 --odak 24 --cikti kadraj.svg
+```
+
+```
+Kadraj: UYGUN DEĞİL
+  gereken mesafe : 4.00 m
+  oda derinliği  : 3.00 m
+  kadraja giren  : 4.50 m
+  doluluk oranı  : 133%
+  öneri          : odağı 18 mm veya altına düşürün
+```
+
+Diyagram; duvarı, kamera konumunu, görüş açısı konisini ve kadraja giren genişliği
+ölçekli olarak çizer. Araç, kadraj sığmadığında **sıfırdan farklı bir kod** döndürür;
+böylece betiklerde kontrol olarak kullanılabilir.
+
+Örnek: 6,00 m genişliğinde bir duvarı 24 mm odakla kadraja almak 4,00 m mesafe
+gerektirir. Oda yalnızca 3,00 m derinse kamera geriye gidemez, kadraja 4,50 m girer
+ve duvarın 1,50 m'si kare dışında kalır. Bunu render almadan bilmek, o kare için
+harcanacak süreyi kurtarır.
+
+---
+
 ## Koordinat ve açı kabulü
 
 - `+X` doğu, `+Y` kuzey, `+Z` yukarı.
@@ -190,13 +221,14 @@ framing.ortho_scale_for_area(62, 45, {"width": 3200, "height": 3200}, margin=1.1
 ## Test durumu
 
 ```bash
-python -m pytest -q      # 68 test
+python -m pytest -q      # 81 test
 ```
 
 **Dürüst durum bildirimi:**
 
 - Saf Python çekirdeği (ön ayarlar, kamera matematiği, çekim listesi,
-  adlandırma, Blender köprü mantığı) **68 birim testiyle doğrulanmıştır** ve
+  adlandırma, kadraj analizi, Blender köprü mantığı) **81 birim testiyle
+  doğrulanmıştır** ve
   Blender kurulumu gerektirmez.
 - `blender/` altındaki iki script, Blender'ın kendi çalışma zamanını
   gerektirdiği için **henüz gerçek bir Blender oturumunda çalıştırılmamıştır**.
